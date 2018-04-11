@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "NodeJS kafka client for cdc.",
   "main": "index.js",
-  "repository": "git@code.aliyun.com:rigo/node-cdc-kafka.git",
+  "repository": "git@github.com:rigoiot/node-cdc-kafka.git",
   "author": "Tim Zhang",
   "license": "RIGO License",
   "private": true,
   "dependencies": {
     "kafka-node": "^2.5.0",
-    "lodash": "^4.17.5",
     "mqtt-pattern": "^1.1.3",
     "node-cdc-proto": "rigoiot/node-cdc-proto",
     "uuid": "^3.2.1"
