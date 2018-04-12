@@ -2,57 +2,6 @@
 # yarn lockfile v1
 
 
-"@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@protobufjs/aspromise/-/aspromise-1.1.2.tgz#9b8b0cc663d669a7d8f6f5d0893a14d348f30fbf"
-
-"@protobufjs/base64@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@protobufjs/base64/-/base64-1.1.2.tgz#4c85730e59b9a1f1f349047dbf24296034bb2735"
-
-"@protobufjs/codegen@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@protobufjs/codegen/-/codegen-2.0.4.tgz#7ef37f0d010fb028ad1ad59722e506d9262815cb"
-
-"@protobufjs/eventemitter@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@protobufjs/eventemitter/-/eventemitter-1.1.0.tgz#355cbc98bafad5978f9ed095f397621f1d066b70"
-
-"@protobufjs/fetch@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@protobufjs/fetch/-/fetch-1.1.0.tgz#ba99fb598614af65700c1619ff06d454b0d84c45"
-  dependencies:
-    "@protobufjs/aspromise" "^1.1.1"
-    "@protobufjs/inquire" "^1.1.0"
-
-"@protobufjs/float@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@protobufjs/float/-/float-1.0.2.tgz#5e9e1abdcb73fc0a7cb8b291df78c8cbd97b87d1"
-
-"@protobufjs/inquire@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@protobufjs/inquire/-/inquire-1.1.0.tgz#ff200e3e7cf2429e2dcafc1140828e8cc638f089"
-
-"@protobufjs/path@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@protobufjs/path/-/path-1.1.2.tgz#6cc2b20c5c9ad6ad0dccfd21ca7673d8d7fbf68d"
-
-"@protobufjs/pool@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@protobufjs/pool/-/pool-1.1.0.tgz#09fd15f2d6d3abfa9b65bc366506d6ad7846ff54"
-
-"@protobufjs/utf8@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
-
-"@types/long@^3.0.32":
-  version "3.0.32"
-  resolved "https://registry.yarnpkg.com/@types/long/-/long-3.0.32.tgz#f4e5af31e9e9b196d8e5fca8a5e2e20aa3d60b69"
-
-"@types/node@^8.9.4":
-  version "8.10.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.4.tgz#d3ca40ee884c853e2b786ee73096726ec59a5b31"
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -447,10 +396,6 @@ long@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/long/-/long-1.1.2.tgz#eaef5951ca7551d96926b82da242db9d6b28fb53"
 
-long@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/long/-/long-4.0.0.tgz#9a7b71cfb7d361a194ea555241c92f7468d5bf28"
-
 mime-db@~1.33.0:
   version "1.33.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.33.0.tgz#a3492050a5cb9b63450541e39d9788d2272783db"
@@ -495,24 +440,11 @@ nan@^2.6.1:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
 
-nats@^0.7.20:
-  version "0.7.29"
-  resolved "https://registry.yarnpkg.com/nats/-/nats-0.7.29.tgz#23b203a1102887a42cc378f521cb3dc182c31327"
-  dependencies:
-    nuid ">=0.6.8"
-
 nested-error-stacks@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.0.0.tgz#98b2ffaefb4610fa3936f1e71435d30700de2840"
   dependencies:
     inherits "~2.0.1"
-
-node-cdc-proto@rigoiot/node-cdc-proto:
-  version "1.1.0"
-  resolved "https://codeload.github.com/rigoiot/node-cdc-proto/tar.gz/91e448c687c9ac1d7266d5372e906ecf1a5f7306"
-  dependencies:
-    nats "^0.7.20"
-    protobufjs "^6.8.0"
 
 node-gyp@^3.6.2:
   version "3.6.2"
@@ -553,10 +485,6 @@ node-zookeeper-client@~0.2.2:
     console-control-strings "~1.1.0"
     gauge "~2.7.3"
     set-blocking "~2.0.0"
-
-nuid@>=0.6.8:
-  version "0.6.14"
-  resolved "https://registry.yarnpkg.com/nuid/-/nuid-0.6.14.tgz#a225c8b720e46c563ad8d13641368669f6c25b48"
 
 number-is-nan@^1.0.0:
   version "1.0.1"
@@ -606,24 +534,6 @@ performance-now@^2.1.0:
 process-nextick-args@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.0.tgz#a37d732f4271b4ab1ad070d35508e8290788ffaa"
-
-protobufjs@^6.8.0:
-  version "6.8.6"
-  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-6.8.6.tgz#ce3cf4fff9625b62966c455fc4c15e4331a11ca2"
-  dependencies:
-    "@protobufjs/aspromise" "^1.1.2"
-    "@protobufjs/base64" "^1.1.2"
-    "@protobufjs/codegen" "^2.0.4"
-    "@protobufjs/eventemitter" "^1.1.0"
-    "@protobufjs/fetch" "^1.1.0"
-    "@protobufjs/float" "^1.0.2"
-    "@protobufjs/inquire" "^1.1.0"
-    "@protobufjs/path" "^1.1.2"
-    "@protobufjs/pool" "^1.1.0"
-    "@protobufjs/utf8" "^1.1.0"
-    "@types/long" "^3.0.32"
-    "@types/node" "^8.9.4"
-    long "^4.0.0"
 
 punycode@^1.4.1:
   version "1.4.1"

@@ -10,7 +10,6 @@
   "dependencies": {
     "kafka-node": "^2.5.0",
     "mqtt-pattern": "^1.1.3",
-    "node-cdc-proto": "rigoiot/node-cdc-proto",
     "uuid": "^3.2.1"
   }
 }
