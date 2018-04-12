@@ -3,36 +3,27 @@
 /* jslint node: true */
 'use strict';
 
-var proto = require('../lib/proto');
-
-
 var server = process.argv[2];
-var subject = process.argv[3];
-var data = process.argv[4] || '';
-var contentType = process.argv[5] || 'json';
+var topic = process.argv[3];
+var subject = process.argv[4];
 
-if (!subject || !server) {
-  console.log('Usage: cdc-pub <server> <subject> [msg] [contentType]');
+if (!subject || !server || !topic) {
+  console.log('Usage: cdc-kafka-sub <server> <topic> <subject>');
   process.exit();
 }
 
-var nats = require('nats').connect({
-  servers: [server]
-});
+var kafka = require('../lib/kafka').connect({
+  kafkaHost: server
+}, topic);
 
-nats.on('error', function(e) {
-  console.log('Error [' + nats.options.url + ']: ' + e);
+kafka.on('error', function(e) {
+  console.log('Error [' + server + ']: ' + e);
   process.exit();
 });
 
-var cdcMsg = new proto.CDCMsg();
-cdcMsg.setPublisher('cdc-pub');
-cdcMsg.setChannel(subject);
-cdcMsg.setContentType(contentType);
-cdcMsg.setProtocol('nats');
-cdcMsg.setData(data);
+console.log('Publish to  [' + subject + ']');
 
-nats.publish(subject, new Buffer(cdcMsg.serializeBinary()), function() {
-  console.log('Published [' + subject + '] : "' + data + '"');
-  process.exit();
+kafka.publish(subject, 'test', function(error, data) {
+  console.log(error);
+  console.log(data);
 });

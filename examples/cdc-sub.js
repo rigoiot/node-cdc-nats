@@ -25,6 +25,4 @@ console.log('Listening on [' + subject + ']');
 
 var sid = kafka.subscribe(subject, function(msg) {
   console.log(msg);
-// kafka.unsubscribe(sid)
-// console.log(new Date() + ' >>>> ' + msg.getData());
 });
