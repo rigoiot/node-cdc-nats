@@ -6,9 +6,10 @@
 var server = process.argv[2];
 var topic = process.argv[3];
 var subject = process.argv[4];
+var data = process.argv[5];
 
-if (!subject || !server || !topic) {
-  console.log('Usage: cdc-kafka-sub <server> <topic> <subject>');
+if (!subject || !server || !topic || !data) {
+  console.log('Usage: cdc-pub <server> <topic> <subject> <data>');
   process.exit();
 }
 
@@ -23,7 +24,7 @@ kafka.on('error', function(e) {
 
 console.log('Publish to  [' + subject + ']');
 
-kafka.publish(subject, 'test', function(error, data) {
+kafka.publish(subject, data, function(error, data) {
   console.log(error);
   console.log(data);
 });
