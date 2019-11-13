@@ -1,28 +1,31 @@
 #!/usr/bin/env node
 
 /* jslint node: true */
-'use strict';
+"use strict";
 
 var server = process.argv[2];
 var topic = process.argv[3];
 var subject = process.argv[4];
 
 if (!subject || !server || !topic) {
-  console.log('Usage: cdc-kafka-sub <server> <topic> <subject>');
+  console.log("Usage: cdc-nats-sub <server> <topic> <subject>");
   process.exit();
 }
 
-var kafka = require('../lib/kafka').connect({
-  kafkaHost: server
-}, topic);
+var nats = require("../lib/nats").connect(
+  {
+    url: server,
+  },
+  topic
+);
 
-kafka.on('error', function(e) {
-  console.log('Error [' + server + ']: ' + e);
+nats.on("error", function(e) {
+  console.log("Error [" + server + "]: " + e);
   process.exit();
 });
 
-console.log('Listening on [' + subject + ']');
+console.log("Listening on [" + subject + "]");
 
-var sid = kafka.subscribe(subject, function(msg) {
+var sid = nats.subscribe(subject, function(msg) {
   console.log(msg);
 });

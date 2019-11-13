@@ -1,15 +1,15 @@
 {
-  "name": "node-cdc-kafka",
+  "name": "node-cdc-nats",
   "version": "1.0.0",
-  "description": "NodeJS kafka client for cdc.",
+  "description": "NodeJS nats client for cdc.",
   "main": "index.js",
-  "repository": "git@github.com:rigoiot/node-cdc-kafka.git",
+  "repository": "git@github.com:rigoiot/node-cdc-nats.git",
   "author": "Tim Zhang",
   "license": "RIGO License",
   "private": true,
   "dependencies": {
-    "kafka-node": "^2.5.0",
     "mqtt-pattern": "^1.1.3",
+    "nats": "^1.3.2",
     "uuid": "^3.2.1"
   }
 }
