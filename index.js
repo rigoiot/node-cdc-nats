@@ -1,1 +1,1 @@
-module.exports = require('./lib/kafka');
+module.exports = require("./lib/nats");
