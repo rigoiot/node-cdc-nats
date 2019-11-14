@@ -3,6 +3,7 @@
 /* jslint node: true */
 "use strict";
 
+var proto = require("node-cdc-proto");
 var server = process.argv[2];
 var topic = process.argv[3];
 var subject = process.argv[4];
@@ -27,7 +28,21 @@ nats.on("error", function(e) {
 
 console.log("Publish to  [" + subject + "]");
 
-nats.publish(subject, data, function(error, data) {
+var cdcMsg = proto.CDCMsg.fromObject({
+  publisher: "nms",
+  channel: subject,
+  contentType: "json",
+  protocol: "http",
+  reply: "",
+  QOS: 0,
+  retain: false,
+  payload: new Uint8Array(new Buffer(data, "utf8"))
+});
+
+nats.publish(subject, proto.CDCMsg.encode(cdcMsg).finish(), function(
+  error,
+  data
+) {
   console.log(error);
   console.log(data);
 });
