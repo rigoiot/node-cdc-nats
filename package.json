@@ -1,6 +1,6 @@
 {
   "name": "node-cdc-nats",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NodeJS nats client for cdc.",
   "main": "index.js",
   "repository": "git@github.com:rigoiot/node-cdc-nats.git",
